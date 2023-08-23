@@ -41,7 +41,11 @@ while(pointer<len(header)):
             if chunky==nbt["sections"][pprointer]["Y"]:
               print("/*"+str(pprointer)+"*/")
               temdp=nbt["sections"][pprointer] 
-              print(temdp.keys())
+              print(temdp["block_states"]["data"])
+              print("////////")
+              print(temdp["block_states"]["palette"])
+              print("////////")
+              print(len(temdp["block_states"]["palette"]))
             pprointer=pprointer+1
 
 file.close()
